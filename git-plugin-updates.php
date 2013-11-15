@@ -3,7 +3,7 @@
 Plugin Name: OM4 Plugin Updater
 Plugin URI: https://github.com/OM4/om4-plugin-updater/
 Description: Updates OM4 plugins via the WordPress update system.
-Version: 2.0.2-dev
+Version: 2.0.1
 Author: OM4
 Author URI: https://github.com/OM4/om4-plugin-updater/
 License: GPLv2
