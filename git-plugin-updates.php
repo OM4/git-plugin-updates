@@ -1,15 +1,20 @@
 <?php
 /*
-Plugin Name: Git Plugin Updates
-Plugin URI: https://github.com/brainstormmedia/git-plugin-updates
-Description: Update plugins hosted on <a href="http://github.com" target="_blank">Github</a> and <a href="http://bitbucket.org" target="_blank">Bitbucket</a>. Search and install plugins from Github using <a href="https://github.com/brainstormmedia/github-plugin-search/" target="_blank">Github Plugin Search</a>.
+Plugin Name: OM4 Plugin Updater
+Plugin URI: https://github.com/OM4/om4-plugin-updater/
+Description: Updates OM4 plugins via the WordPress update system.
 Version: 2.0.1
-Author: Brainstorm Media
-Author URI: http://brainstormmedia.com/
+Author: OM4
+Author URI: https://github.com/OM4/om4-plugin-updater/
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Git URI: https://github.com/brainstormmedia/git-plugin-updates
+Git URI: https://github.com/OM4/om4-plugin-updater
 */
+
+/*
+ * Note: the code in this plugin is based on the Git Plugin Updater plugin by Brainstorm Media: https://github.com/brainstormmedia/git-plugin-updates
+ * Thank you to Paul Clark (https://github.com/pdclark) and everyone else who contributed to the Git Plugin Updater project.
+ */
 
 /**
  * ## TESTING
