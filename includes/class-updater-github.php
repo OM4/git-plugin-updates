@@ -17,8 +17,12 @@ class GPU_Updater_Github extends GPU_Updater {
 	public function __construct( $args ){
 		parent::__construct( $args );
 
-		// Todo: Properly set branch from plugin header
-		$this->branch = $this->get_default_branch();
+		// Set branch from plugin header
+		if ( isset( $this->{'Git Branch'} ) && !empty( $this->{'Git Branch'} ) ) {
+			$this->branch = $this->{'Git Branch'};
+		} else {
+			$this->branch = $this->get_default_branch();
+		}
 	}
 
 	/**
