@@ -17,8 +17,13 @@ class GPU_Updater_Bitbucket extends GPU_Updater {
 	public function __construct( $args ){
 		parent::__construct( $args );
 
-		// Todo: Properly set branch from plugin header
-		$this->branch = 'master';
+		// Set branch from plugin header
+		if ( isset( $this->{'Git Branch'} ) && !empty( $this->{'Git Branch'} ) ) {
+			$this->branch = $this->{'Git Branch'};
+		} else {
+			$this->branch = 'master';
+		}
+
 	}
 
 	public function set_repo_info( $plugin ) {
