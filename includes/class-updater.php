@@ -244,6 +244,9 @@ abstract class GPU_Updater {
 
 		// parse_plugin_uri() defined in GPU_Updater
 		$uri  = self::parse_plugin_uri( $plugin );
+		if ( empty( $uri ) ) {
+			return;
+		}
 		$path = explode('/', $uri['path'] );
 		$this->host       = $uri['host'];
 
