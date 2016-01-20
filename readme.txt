@@ -1,7 +1,7 @@
 === OM4 Plugin Updater ===
-Requires at least: 3.6
-Tested up to: 3.7.1
-Stable tag: 2.0.1
+Requires at least: 4.0
+Tested up to: 4.4.1
+Stable tag: 2.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -16,9 +16,12 @@ Thank you to Paul Clark (https://github.com/pdclark) and everyone else who contr
 == Changelog ==
 
 = 2.1 =
+* Fix PHP notice.
+
+= 2.0 =
 * Initial Release.
 
 == Upgrade Notice ==
 
-= 2.1 =
+= 2.0 =
 Initial Release.
