@@ -90,7 +90,7 @@ class GPU_Controller {
 		add_filter( 'pre_set_site_transient_update_plugins', array( $this, 'pre_set_site_transient_update_plugins' ) );
 
 		// Build Git plugin list
-		add_action( 'admin_init', array($this, 'load_plugins'), 20 );
+		add_action( 'init', array($this, 'load_plugins'), 20 );
 
 		// Plugin details screen
 		add_filter( 'plugins_api', array( $this, 'plugins_api' ), 9000, 3 );

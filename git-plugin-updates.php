@@ -23,10 +23,10 @@ Git Branch: release
  */
 
 /**
- * Verify we're in wp-admin -- plugin doesn't need to load in front-end.
  * Verify that we're running WordPress 3.2 (which enforces PHP 5.2.4).
  */
-if ( is_admin() && version_compare( $GLOBALS['wp_version'], '3.2', '>=' ) ) :
+
+if ( version_compare( $GLOBALS['wp_version'], '3.2', '>=' ) ) :
 
 	// Load plugin classes and instantiate the plugin.
 	require_once dirname( __FILE__ ) . '/includes/class-controller.php';
