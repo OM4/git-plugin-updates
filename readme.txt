@@ -15,6 +15,10 @@ Thank you to Paul Clark (https://github.com/pdclark) and everyone else who contr
 
 == Changelog ==
 
+= 2.1.1 =
+* Compatibility with WP-CLI
+* Fix PHP notices.
+
 = 2.1 =
 * Fix PHP notice.
 
@@ -22,6 +26,9 @@ Thank you to Paul Clark (https://github.com/pdclark) and everyone else who contr
 * Initial Release.
 
 == Upgrade Notice ==
+
+= 2.1.1 =
+* Compatibility with WP-CLI
 
 = 2.0 =
 Initial Release.
