@@ -206,6 +206,10 @@ class GPU_Controller {
 
 		global $wp_version;
 
+		if ( ! function_exists( 'get_plugins' ) ) {
+			require_once( ABSPATH . '/wp-admin/includes/plugin.php' );
+		}
+
 		foreach ( get_plugins() as $slug => $args ) {
 			$args = array_merge( array( 'slug' => $slug ), $args );
 			
