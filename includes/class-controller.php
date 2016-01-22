@@ -77,7 +77,8 @@ class GPU_Controller {
 	protected function init() {
 
 		$this->options = get_site_option( self::OPTION_KEY );
-		$this->clear_cache_if_debugging();
+		// Disable automatic cache clearing
+//		$this->clear_cache_if_debugging();
 
 		// Filter allows search results to be updated more or less frequently.
 		// Default is 60 minutes
