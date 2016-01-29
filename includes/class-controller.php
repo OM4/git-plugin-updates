@@ -102,6 +102,9 @@ class GPU_Controller {
 
 		add_filter( 'http_request_args', array( $this, 'disable_git_ssl_verify' ), 10, 2 );
 
+		// Make sure WordPress doesn't check for plugin updates while browsing wp-admin (except on update/plugin screens)
+		// This can create performance issues when using a lot of premium / third party plugins that ping their own sites for updates.
+		remove_action( 'admin_init', '_maybe_update_plugins' );
 	}
 
 	public function get_option( $key ) {

@@ -18,6 +18,7 @@ Thank you to Paul Clark (https://github.com/pdclark) and everyone else who contr
 = 2.1.3 =
 * Check for updates less often (twice daily instead of hourly).
 * Improved handling of error responses during update checks.
+* Avoid plugin update checks while browsing wp-admin (except on dedicated plugin/update screens).
 
 = 2.1.2 =
 * Fix fatal error.
