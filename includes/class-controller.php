@@ -82,7 +82,8 @@ class GPU_Controller {
 
 		// Filter allows search results to be updated more or less frequently.
 		// Default is 60 minutes
-		GPU_Controller::$update_interval = apply_filters( 'gpu_update_interval', 60*60 );
+		// Customised to twice daily (12-hourly)
+		GPU_Controller::$update_interval = apply_filters( 'gpu_update_interval', 12 * HOUR_IN_SECONDS );
 
 		// Add Git URI: to valid plugin headers
 		add_filter( 'extra_plugin_headers', array($this, 'extra_plugin_headers') );

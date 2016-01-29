@@ -48,9 +48,8 @@ class GPU_Updater_Github extends GPU_Updater {
 		if ( false === $remote ) {
 			$remote = $this->api( '/repos/:owner/:repo/' . $type );
 
-			if ( $remote ) {
+			// Cache the response, even if its an error (prevents GitHub's API from being constantly queried during rate limiting)
 				set_site_transient( $transient_key, $remote, GPU_Controller::$update_interval );
-			}
 		}
 		return $remote;
 	}
@@ -63,7 +62,7 @@ class GPU_Updater_Github extends GPU_Updater {
 	 * 
 	 * @see    http://developer.github.com/v3/
 	 * @param  string $url
-	 * @return boolean|object
+	 * @return boolean|object null on error
 	 */
 	protected function api( $url ) {
 
@@ -71,7 +70,8 @@ class GPU_Updater_Github extends GPU_Updater {
 		$response = wp_remote_get( $this->get_api_url( $url ), $request_args );
 
 		if ( is_wp_error( $response ) || wp_remote_retrieve_response_code( $response ) != '200' ) {
-			return false;
+			// Return null so the error response is cached, instead of returning false (which isn't cached)
+			return null;
 		}
 
 		return json_decode( wp_remote_retrieve_body( $response ) );

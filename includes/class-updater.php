@@ -164,6 +164,9 @@ abstract class GPU_Updater {
 		$response = $this->get_remote_info();
 		if ( false === $response ) {
 			return false;
+		} else if ( empty( $response ) ) {
+			// API returned an error
+			return false;
 		}
 
 		// Todo: Handle this switch in the sub classes
